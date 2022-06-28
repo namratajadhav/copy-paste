@@ -1,0 +1,62 @@
+.container{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 5%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #46adcf;
+    box-shadow: 5px 8px 20px -5px #000;
+  border-radius: 5px;
+}
+input{
+    width: 50%;
+    padding: 10px;
+    outline: none;
+    border: none;
+   border-radius: 5px;
+}
+.textarea{
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+   border-radius: 5px;
+}
+#btncopy{
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: #e87b7b;
+    box-shadow: 4px 4px 10px #000;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+#btncopy:active{
+    transform: translateY(2px);
+    box-shadow: none;
+}
+#btncopy::after{
+    content: 'Copied';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 0%;
+    height: 102%;
+    background: #e87b7b;
+    color: #fff;
+    animation-delay: 5s;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+#btncopy:focus::after{
+    width: 100%;
+}
